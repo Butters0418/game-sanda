@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+    <title>202012 遊戲 - 聖誕跑跳碰</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/source/meta/favicon.ico" />
+    <link rel="apple-touch-icon" type="image/png" href="img/source/meta/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" type="image/png" href="img/source/meta/favicon-16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="img/source/meta/favicon-32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/source/meta/favicon-64.png" sizes="64x64" />
+    <link rel="manifest" href="img/source/meta/manifest.json" />
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+
+  <body>
+    <!-- 開頭動畫 -->
+    <div class="loading_mask">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <!-- 左欄 -->
+        <div class="header-left">
+          <a href="">
+            <img src="img/source/header/logo-white.svg" alt="icon PChome 24h" />
+          </a>
+        </div>
+        <!-- 右欄 -->
+        <ul class="header-right">
+          <li class="app-download">
+            <span class="divider"></span>
+            APP下載
+            <a href="" class="qrcode-popup">
+              <img src="img/source/header/qrcode.png" alt="QR Code" />
+            </a>
+            <span class="divider"></span>
+          </li>
+          <li class="social-links">
+            <span>追蹤我們：</span>
+            <a href="">
+              <img src="img/source/header/icon-fb-white-fill.svg" alt="icon Facebook" />
+            </a>
+            <a href="">
+              <img src="img/source/header/icon-ig-white-fill.svg" alt="icon Instagram" />
+            </a>
+            <a href="">
+              <img src="img/source/header/icon-yt-white-fill.svg" alt="icon Youtube" />
+            </a>
+            <a href="">
+              <img src="img/source/header/icon-line-white-fill.svg" alt="icon Line" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- END Header -->
+
+    <!-- Main -->
+    <div class="wrap">
+      <div class="main">
+        <!-- <img class="snow-top" src="img/snow-top.png" alt="" /> -->
+        <div id="app"></div>
+      </div>
+    </div>
+    <!-- END Main -->
+
+    <!-- Modal -->
+    <!-- 注意事項 -->
+    <div class="modal" id="remind" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">聖誕跑跳踫</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li><span>活動時間：</span><br />12/17(四) 11:00 - 1/4(一) 10:59</li>
+              <li><span>活動說明：</span><br />迷糊的聖誕老公公把禮物弄丟了，請幫他收集禮物，讓小朋友可以如期在聖誕節收到禮物吧!</li>
+              <li><span>遊戲方法：</span><br />30 秒內左右移動 (鍵盤也可) 聖誕老公公並收集禮物，小心不要接到太多炸彈，不然聖誕老公公一年一度的任務就失敗囉!</li>
+              <li><span>遊戲方法：</span><br />僅為個人作品示意，已移除獎品相關資訊與連結。</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">關 閉</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 成功-商品 -->
+    <div class="modal modal-game" id="gamesuccess" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="img/game-success2.png" />
+            <div class="btns">
+              <a class="btn-pdlink" href="javascript:;"><img src="img/btn-pdlink.png" /></a>
+              <a class="btn-again" href="javascript:;"><img src="img/btn-again.png" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 失敗 -->
+    <div class="modal modal-game" id="gamelose" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="img/game-lose.png" alt="" />
+            <div class="btns">
+              <a class="btn-again" href="javascript:;"><img src="img/btn-again.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/phaser.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/gameStart.js"></script>
+    <script type="text/javascript" src="js/gamePlay.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
